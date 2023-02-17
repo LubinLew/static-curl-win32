@@ -127,6 +127,17 @@ cat >> ../release.md<<EOF
 | ${CURL}.nonstrip | ${arch} | schannel | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | ${SUM2} |
 EOF
   done
+
+cat >> ../release.md<<EOF
+
+## Protocols
+
+file http https
+
+## Features
+
+alt-svc AsynchDNS HSTS HTTPS-proxy IPv6 Kerberos Largefile NTLM SPNEGO SSL SSPI threadsafe UnixSocketsEOF
+EOF
 }
 
 
