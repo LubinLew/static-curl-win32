@@ -8,7 +8,6 @@ TAG="CURL"
 
 # get latest version
 function get_curl_version() {
- apt-get install -y curl wget > /dev/null
   KEYWORD="Location: https://github.com/curl/curl/releases/tag/curl-"
   VERSION=$(curl -Isk 'https://github.com/curl/curl/releases/latest' | grep -i "${KEYWORD}" | sed "s#${KEYWORD}##i" | sed 's#_#.#g' | tr -d '\r')
   echo ${VERSION}
@@ -132,7 +131,9 @@ EOF
 
 
 ############################################################
-
+apt-get update -y > /dev/null
+apt-get install -y curl wget > /dev/null
+ 
 if [ -z ${CURL_VERSION} ] ; then
   CURL_VERSION=$(get_curl_version)
 fi
