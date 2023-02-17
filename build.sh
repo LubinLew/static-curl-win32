@@ -27,7 +27,7 @@ if [ "${CURL_VERSION}" == "${LOCAL_VERSION}" ] ; then
   exit 0
 fi
 
-echo "update to ${CURL_VERSION}" > version.txt
+echo "${CURL_VERSION}" > version.txt
 
 docker pull ${IMAGE}
 docker run --rm ${RUNENV} -v `pwd`/curl:${WORKDIR} -w ${WORKDIR} ${IMAGE} ${WORKDIR}/curl.sh 2>&1 | tee -a build.log

@@ -44,6 +44,6 @@ jobs:
         with:
           tag: ${{env.VERSION}}
           name: "static-curl-${{env.VERSION}}"
-          artifacts: "curl/*.exe,curl/*.nonstrip"
+          artifacts: "build.log,curl/*.exe,curl/*.nonstrip"
           bodyFile: "curl/release.md"
           token: ${{ secrets.GITHUB_TOKEN }}
