@@ -89,7 +89,7 @@ EOF
 
   ARCHS=("i686" "x86_64")
   for arch in ${ARCHS[@]} ; do
-     make clean
+     make clean || true
     ./configure \
        --host ${arch} \
        --disable-shared \
