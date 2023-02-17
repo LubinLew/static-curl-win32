@@ -1,1 +1,1 @@
-7.88.0
+location: https://github.com/LubinLew/static-curl-win32/releases -> 7.88.0
