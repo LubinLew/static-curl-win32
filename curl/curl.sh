@@ -122,7 +122,7 @@ EOF
   SUM1=$(sha256sum ../${CURL}          | awk '{print $1}')
   SUM2=$(sha256sum ../${CURL}.nonstrip | awk '{print $1}')
 
-cat >> release.md<<EOF
+cat >> ../release.md<<EOF
 | ${CURL}          | ${arch} | schannel | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | ${SUM1} |
 | ${CURL}.nonstrip | ${arch} | schannel | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :x: | ${SUM2} |
 EOF
