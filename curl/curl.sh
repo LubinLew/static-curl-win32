@@ -54,7 +54,7 @@ function build_curl_source() {
   
   if [ ! -f release.md ] ; then
 cat > release.md<<EOF
-# static curl ${CURL_VERSION}
+# static curl for windows ${CURL_VERSION}
 | Name | Arch | TLS Provider | TLSv1.0 | TLSv1.1 | TLSv1.2 | TLSv1.3 | sha256sum |
 |------|------|--------------|---------|---------|---------|---------|-----------|
 EOF

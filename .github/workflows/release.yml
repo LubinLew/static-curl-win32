@@ -36,14 +36,14 @@ jobs:
         if: env.GOON == 'true'
         with:
           tag: ${{env.VERSION}}
-          message: "static curl ${{env.VERSION}}"
+          message: "static curl for windows ${{env.VERSION}}"
 
       - name: Create Release
         uses: ncipollo/release-action@v1
         if: env.GOON == 'true'
         with:
           tag: ${{env.VERSION}}
-          name: "static-curl-${{env.VERSION}}"
+          name: "static-curl-win32-${{env.VERSION}}"
           artifacts: "build.log,curl/*.exe,curl/*.nonstrip"
           bodyFile: "curl/release.md"
           token: ${{ secrets.GITHUB_TOKEN }}
