@@ -132,7 +132,7 @@ EOF
 
 ############################################################
 apt-get update -y > /dev/null
-apt-get install -y curl wget > /dev/null
+apt-get install -y curl wget bzip2 > /dev/null
  
 if [ -z ${CURL_VERSION} ] ; then
   CURL_VERSION=$(get_curl_version)
