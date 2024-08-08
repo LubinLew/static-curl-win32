@@ -132,11 +132,11 @@ cat >> ../release.md<<EOF
 
 ## Protocols
 
-file http https
+file http https ipfs ipns
 
 ## Features
 
-alt-svc AsynchDNS HSTS HTTPS-proxy IPv6 Kerberos Largefile NTLM SPNEGO SSL SSPI threadsafe UnixSocketsEOF
+alt-svc AsynchDNS HSTS HTTPS-proxy IPv6 Kerberos Largefile NTLM SPNEGO SSL SSPI threadsafe UnixSockets
 EOF
 }
 
