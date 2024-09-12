@@ -110,7 +110,8 @@ EOF
        --disable-pop3 \
        --disable-mqtt \
        --disable-ftp \
-       --disable-smb
+       --disable-smb \
+       --without-libpsl
 
     make -j`nproc`
 
